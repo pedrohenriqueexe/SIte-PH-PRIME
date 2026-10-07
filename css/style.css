@@ -30,10 +30,14 @@
 
 html {
     scroll-behavior: smooth;
+
+    background-color: #020409;
 }
 
 body {
     min-height: 100vh;
+
+    background-color: #020409;
 
     background:
         radial-gradient(
@@ -66,6 +70,7 @@ body {
 
 a {
     color: inherit;
+
     text-decoration: none;
 }
 
@@ -75,6 +80,7 @@ button {
 
 img {
     display: block;
+
     max-width: 100%;
 }
 
@@ -141,6 +147,7 @@ img {
 
 .logo {
     display: flex;
+
     align-items: center;
 
     flex-shrink: 0;
@@ -148,6 +155,7 @@ img {
 
 .logo-img {
     width: 155px;
+
     height: auto;
 }
 
@@ -673,6 +681,7 @@ img {
 
 .hero-visual {
     display: flex;
+
     justify-content: center;
 }
 
@@ -1068,7 +1077,7 @@ img {
 
 
 /* ==========================================
-   CARD
+   CARD COMPATIBILIDADE
 ========================================== */
 
 .device-card {
@@ -1141,7 +1150,7 @@ img {
 
 
 /* ==========================================
-   LOGOS DOS DISPOSITIVOS
+   ÍCONES / LOGOS
 ========================================== */
 
 .device-icon {
@@ -1174,6 +1183,13 @@ img {
         );
 }
 
+.device-icon i {
+    color:
+        var(--azul-claro);
+
+    font-size: 24px;
+}
+
 .marca-icon {
     padding: 10px;
 }
@@ -1186,9 +1202,6 @@ img {
 
     object-fit: contain;
 }
-
-
-/* Samsung e Roku são logos mais largas */
 
 .device-card:nth-child(1)
 .marca-icon img,
@@ -1436,6 +1449,423 @@ img {
 
 
 /* ==========================================
+   COMO FUNCIONA
+========================================== */
+
+.processo-section {
+    padding: 90px 0;
+}
+
+.processo-grid {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 16px;
+}
+
+.processo-grid::before {
+    content: "";
+
+    position: absolute;
+
+    top: 58px;
+    left: 8%;
+
+    width: 84%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(32, 184, 255, 0.28),
+            rgba(13, 110, 255, 0.30),
+            rgba(32, 184, 255, 0.28),
+            transparent
+        );
+
+    z-index: 0;
+}
+
+.processo-card {
+    position: relative;
+
+    min-height: 310px;
+
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 24, 42, 0.74),
+            rgba(5, 8, 15, 0.88)
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.07
+        );
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+    z-index: 2;
+}
+
+.processo-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(
+            32,
+            184,
+            255,
+            0.28
+        );
+
+    box-shadow:
+        0 18px 50px
+        rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+}
+
+.processo-numero {
+    position: absolute;
+
+    top: 17px;
+    right: 18px;
+
+    color:
+        rgba(
+            32,
+            184,
+            255,
+            0.18
+        );
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 33px;
+    font-weight: 700;
+}
+
+.processo-icone {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        rgba(
+            13,
+            110,
+            255,
+            0.09
+        );
+
+    border:
+        1px solid
+        rgba(
+            32,
+            184,
+            255,
+            0.18
+        );
+
+    color:
+        var(--azul-claro);
+
+    font-size: 22px;
+}
+
+.processo-card h3 {
+    margin-top: 30px;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 23px;
+
+    line-height: 1.05;
+}
+
+.processo-card p {
+    margin-top: 13px;
+
+    color:
+        var(--cinza);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.processo-card-final {
+    border-color:
+        rgba(
+            32,
+            184,
+            255,
+            0.18
+        );
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(
+                13,
+                110,
+                255,
+                0.10
+            ),
+            transparent 45%
+        ),
+
+        linear-gradient(
+            145deg,
+            rgba(
+                16,
+                24,
+                42,
+                0.78
+            ),
+            rgba(
+                5,
+                8,
+                15,
+                0.90
+            )
+        );
+}
+
+
+/* ==========================================
+   BLOCO DE INFORMAÇÕES
+========================================== */
+
+.processo-info-section {
+    padding:
+        0 0 90px;
+}
+
+.processo-info-box {
+    padding: 48px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    border-radius: 22px;
+
+    background:
+        radial-gradient(
+            circle at right,
+            rgba(
+                13,
+                110,
+                255,
+                0.12
+            ),
+            transparent 38%
+        ),
+
+        linear-gradient(
+            145deg,
+            rgba(
+                14,
+                22,
+                40,
+                0.88
+            ),
+            rgba(
+                5,
+                8,
+                15,
+                0.94
+            )
+        );
+
+    border:
+        1px solid
+        rgba(
+            32,
+            184,
+            255,
+            0.14
+        );
+}
+
+.processo-info-tag {
+    color:
+        var(--azul-claro);
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.processo-info-texto h2 {
+    max-width: 520px;
+
+    margin-top: 9px;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size:
+        clamp(
+            32px,
+            4vw,
+            47px
+        );
+
+    line-height: 1;
+}
+
+.processo-info-texto p {
+    max-width: 540px;
+
+    margin-top: 17px;
+
+    color:
+        var(--cinza);
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+.processo-beneficios {
+    display: grid;
+
+    gap: 13px;
+}
+
+.processo-beneficio {
+    min-height: 76px;
+
+    padding:
+        13px 16px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.025
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.06
+        );
+}
+
+.processo-beneficio-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background:
+        rgba(
+            13,
+            110,
+            255,
+            0.09
+        );
+
+    border:
+        1px solid
+        rgba(
+            32,
+            184,
+            255,
+            0.16
+        );
+
+    color:
+        var(--azul-claro);
+}
+
+.processo-beneficio div:last-child {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.processo-beneficio strong {
+    font-size: 12px;
+}
+
+.processo-beneficio span {
+    margin-top: 4px;
+
+    color:
+        var(--cinza);
+
+    font-size: 10px;
+}
+
+
+/* ==========================================
    TABLET
 ========================================== */
 
@@ -1447,6 +1877,20 @@ img {
                 3,
                 1fr
             );
+    }
+
+
+    .processo-grid {
+        grid-template-columns:
+            repeat(
+                3,
+                1fr
+            );
+    }
+
+
+    .processo-grid::before {
+        display: none;
     }
 
 }
@@ -1632,6 +2076,35 @@ img {
         width: 100%;
     }
 
+
+    /* COMO FUNCIONA */
+
+    .processo-section {
+        padding:
+            70px 0;
+    }
+
+
+    .processo-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+        gap: 13px;
+    }
+
+
+    .processo-info-box {
+        padding: 35px;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 35px;
+    }
+
 }
 
 
@@ -1643,6 +2116,12 @@ img {
 
     .container {
         width: 91%;
+    }
+
+
+    body {
+        background-color:
+            #020409;
     }
 
 
@@ -1666,38 +2145,66 @@ img {
     }
 
 
-    /* HOME */
+    /* ======================================
+       HOME MOBILE
+    ====================================== */
 
     .hero {
+        min-height: auto;
+
         padding-top:
             64px;
     }
 
 
     .hero-container {
-        padding:
-            42px 0 50px;
+        min-height: auto;
 
-        gap: 35px;
+        padding-top: 36px;
+        padding-bottom: 38px;
+
+        gap: 24px;
+    }
+
+
+    .hero-tag {
+        margin-bottom: 2px;
     }
 
 
     .hero h1 {
+        margin-top: 18px;
+
         font-size:
             clamp(
                 40px,
                 12vw,
                 51px
             );
+
+        line-height: 1;
     }
 
 
     .hero-descricao {
+        margin-top: 20px;
+
         font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    .hero-botoes {
+        margin-top: 24px;
+
+        gap: 11px;
     }
 
 
     .hero-diferenciais {
+        margin-top: 22px;
+
         display: grid;
 
         grid-template-columns:
@@ -1725,18 +2232,35 @@ img {
 
     .device-showcase {
         min-height:
-            285px;
+            235px;
+
+        max-width:
+            330px;
+
+        margin-top: 4px;
     }
 
 
     .device-tv {
-        width: 270px;
+        width: 245px;
     }
 
 
     .device-phone {
-        width: 62px;
-        height: 128px;
+        width: 58px;
+        height: 118px;
+
+        right: 4px;
+        bottom: 8px;
+    }
+
+
+    .tv-base {
+        bottom: -34px;
+
+        transform:
+            translateX(-50%)
+            scale(0.88);
     }
 
 
@@ -1745,7 +2269,9 @@ img {
     }
 
 
-    /* COMPATIBILIDADE */
+    /* ======================================
+       COMPATIBILIDADE
+    ====================================== */
 
     .page-hero {
         padding:
@@ -1835,439 +2361,10 @@ img {
             flex-start;
     }
 
-}
 
-
-/* ==========================================
-   CELULAR MUITO PEQUENO
-========================================== */
-
-@media (max-width: 360px) {
-
-    .hero-diferenciais {
-        grid-template-columns:
-            1fr;
-    }
-
-
-    .diferencial {
-        flex-direction:
-            row;
-    }
-
-}
-
-.device-icon i {
-    color: var(--azul-claro);
-    font-size: 24px;
-}
-
-/* ==========================================
-   COMO FUNCIONA
-========================================== */
-
-.processo-section {
-    padding: 90px 0;
-}
-
-
-/* GRID */
-
-.processo-grid {
-    position: relative;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(5, 1fr);
-
-    gap: 16px;
-}
-
-
-/* LINHA ENTRE OS PASSOS */
-
-.processo-grid::before {
-    content: "";
-
-    position: absolute;
-
-    top: 58px;
-    left: 8%;
-
-    width: 84%;
-    height: 1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(32, 184, 255, 0.28),
-            rgba(13, 110, 255, 0.30),
-            rgba(32, 184, 255, 0.28),
-            transparent
-        );
-
-    z-index: 0;
-}
-
-
-/* CARD */
-
-.processo-card {
-    position: relative;
-
-    min-height: 310px;
-
-    padding: 24px;
-
-    display: flex;
-    flex-direction: column;
-
-    border-radius: 18px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(16, 24, 42, 0.74),
-            rgba(5, 8, 15, 0.88)
-        );
-
-    border:
-        1px solid rgba(255, 255, 255, 0.07);
-
-    overflow: hidden;
-
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease;
-
-    z-index: 2;
-}
-
-
-.processo-card:hover {
-    transform:
-        translateY(-5px);
-
-    border-color:
-        rgba(32, 184, 255, 0.28);
-
-    box-shadow:
-        0 18px 50px rgba(0, 0, 0, 0.25);
-}
-
-
-/* NÚMERO */
-
-.processo-numero {
-    position: absolute;
-
-    top: 17px;
-    right: 18px;
-
-    color:
-        rgba(32, 184, 255, 0.18);
-
-    font-family:
-        "Rajdhani",
-        sans-serif;
-
-    font-size: 33px;
-    font-weight: 700;
-}
-
-
-/* ÍCONE */
-
-.processo-icone {
-    width: 58px;
-    height: 58px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 15px;
-
-    background:
-        rgba(13, 110, 255, 0.09);
-
-    border:
-        1px solid rgba(32, 184, 255, 0.18);
-
-    color:
-        var(--azul-claro);
-
-    font-size: 22px;
-}
-
-
-/* TEXTOS */
-
-.processo-card h3 {
-    margin-top: 30px;
-
-    font-family:
-        "Rajdhani",
-        sans-serif;
-
-    font-size: 23px;
-
-    line-height: 1.05;
-}
-
-
-.processo-card p {
-    margin-top: 13px;
-
-    color:
-        var(--cinza);
-
-    font-size: 12px;
-
-    line-height: 1.7;
-}
-
-
-/* ÚLTIMO CARD */
-
-.processo-card-final {
-    border-color:
-        rgba(32, 184, 255, 0.18);
-
-    background:
-        radial-gradient(
-            circle at top right,
-            rgba(13, 110, 255, 0.10),
-            transparent 45%
-        ),
-        linear-gradient(
-            145deg,
-            rgba(16, 24, 42, 0.78),
-            rgba(5, 8, 15, 0.90)
-        );
-}
-
-
-/* ==========================================
-   BLOCO DE INFORMAÇÕES
-========================================== */
-
-.processo-info-section {
-    padding:
-        0 0 90px;
-}
-
-
-.processo-info-box {
-    padding: 48px;
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 60px;
-
-    align-items: center;
-
-    border-radius: 22px;
-
-    background:
-        radial-gradient(
-            circle at right,
-            rgba(13, 110, 255, 0.12),
-            transparent 38%
-        ),
-        linear-gradient(
-            145deg,
-            rgba(14, 22, 40, 0.88),
-            rgba(5, 8, 15, 0.94)
-        );
-
-    border:
-        1px solid rgba(32, 184, 255, 0.14);
-}
-
-
-/* TEXTO */
-
-.processo-info-tag {
-    color:
-        var(--azul-claro);
-
-    font-family:
-        "Rajdhani",
-        sans-serif;
-
-    font-size: 11px;
-    font-weight: 700;
-
-    letter-spacing: 2px;
-}
-
-
-.processo-info-texto h2 {
-    max-width: 520px;
-
-    margin-top: 9px;
-
-    font-family:
-        "Rajdhani",
-        sans-serif;
-
-    font-size:
-        clamp(32px, 4vw, 47px);
-
-    line-height: 1;
-}
-
-
-.processo-info-texto p {
-    max-width: 540px;
-
-    margin-top: 17px;
-
-    color:
-        var(--cinza);
-
-    font-size: 13px;
-
-    line-height: 1.75;
-}
-
-
-/* BENEFÍCIOS */
-
-.processo-beneficios {
-    display: grid;
-
-    gap: 13px;
-}
-
-
-.processo-beneficio {
-    min-height: 76px;
-
-    padding: 13px 16px;
-
-    display: flex;
-    align-items: center;
-
-    gap: 14px;
-
-    border-radius: 13px;
-
-    background:
-        rgba(255, 255, 255, 0.025);
-
-    border:
-        1px solid rgba(255, 255, 255, 0.06);
-}
-
-
-.processo-beneficio-icon {
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    flex-shrink: 0;
-
-    border-radius: 11px;
-
-    background:
-        rgba(13, 110, 255, 0.09);
-
-    border:
-        1px solid rgba(32, 184, 255, 0.16);
-
-    color:
-        var(--azul-claro);
-}
-
-
-.processo-beneficio div:last-child {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.processo-beneficio strong {
-    font-size: 12px;
-}
-
-
-.processo-beneficio span {
-    margin-top: 4px;
-
-    color:
-        var(--cinza);
-
-    font-size: 10px;
-}
-
-
-/* ==========================================
-   COMO FUNCIONA - TABLET
-========================================== */
-
-@media (max-width: 1050px) {
-
-    .processo-grid {
-        grid-template-columns:
-            repeat(3, 1fr);
-    }
-
-
-    .processo-grid::before {
-        display: none;
-    }
-
-}
-
-
-/* ==========================================
-   COMO FUNCIONA - MOBILE
-========================================== */
-
-@media (max-width: 850px) {
-
-    .processo-section {
-        padding:
-            70px 0;
-    }
-
-
-    .processo-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        gap: 13px;
-    }
-
-
-    .processo-info-box {
-        padding: 35px;
-
-        grid-template-columns:
-            1fr;
-
-        gap: 35px;
-    }
-
-}
-
-
-/* ==========================================
-   COMO FUNCIONA - CELULAR
-========================================== */
-
-@media (max-width: 480px) {
+    /* ======================================
+       COMO FUNCIONA
+    ====================================== */
 
     .processo-section {
         padding:
@@ -2343,6 +2440,53 @@ img {
 
     .processo-beneficio {
         min-height: 70px;
+    }
+
+}
+
+
+/* ==========================================
+   CELULAR MUITO PEQUENO
+========================================== */
+
+@media (max-width: 360px) {
+
+    .hero-diferenciais {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .diferencial {
+        flex-direction:
+            row;
+    }
+
+
+    .device-showcase {
+        max-width:
+            285px;
+    }
+
+
+    .device-tv {
+        width:
+            225px;
+    }
+
+}
+
+
+/* ==========================================
+   ACESSIBILIDADE
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+        scroll-behavior: auto !important;
+
+        transition: none !important;
     }
 
 }
