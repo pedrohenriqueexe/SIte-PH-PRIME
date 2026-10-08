@@ -1927,39 +1927,42 @@ img {
     }
 
 
-    .nav {
-        position: fixed;
+   .nav {
+    position: fixed;
 
-        top: 68px;
-        left: 0;
+    top: 68px;
+    left: 0;
 
-        width: 100%;
+    width: 100%;
 
-        height:
-            calc(
-                100vh - 68px
-            );
+    height:
+        calc(
+            100dvh - 68px
+        );
 
-        padding:
-            25px 7%;
+    padding:
+        25px 7% 45px;
 
-        display: flex;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-        background:
-            #03060d;
+    gap: 0;
 
-        transform:
-            translateX(100%);
+    overflow-y: auto;
 
-        opacity: 0;
+    background:
+        #03060d;
 
-        pointer-events: none;
+    transform:
+        translateX(100%);
 
-        transition:
-            0.3s ease;
-    }
+    opacity: 0;
 
+    pointer-events: none;
+
+    transition:
+        0.3s ease;
+}
 
     .nav.aberto {
         transform:
@@ -2135,15 +2138,16 @@ img {
     }
 
 
-    .nav {
-        top: 64px;
+   .nav {
+    top: 64px;
 
-        height:
-            calc(
-                100vh - 64px
-            );
-    }
+    height:
+        calc(
+            100dvh - 64px
+        );
 
+    padding-bottom: 45px;
+}
 
     /* ======================================
        HOME MOBILE
@@ -2487,6 +2491,2873 @@ img {
         scroll-behavior: auto !important;
 
         transition: none !important;
+    }
+
+}
+
+/* ==========================================
+   PÁGINA APLICATIVOS
+========================================== */
+
+.apps-section {
+    padding: 90px 0;
+}
+
+
+/* ==========================================
+   GRID DOS APPS
+========================================== */
+
+.apps-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+/* ==========================================
+   CARD APP
+========================================== */
+
+.app-card {
+    min-height: 300px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 24, 42, 0.74),
+            rgba(5, 8, 15, 0.86)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.app-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--borda-azul);
+
+    box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+.app-card-destaque {
+    border-color:
+        rgba(32, 184, 255, 0.20);
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(13, 110, 255, 0.11),
+            transparent 42%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(16, 24, 42, 0.78),
+            rgba(5, 8, 15, 0.90)
+        );
+}
+
+
+/* ==========================================
+   TOPO DO APP
+========================================== */
+
+.app-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.app-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background:
+        rgba(13, 110, 255, 0.09);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.17);
+
+    color:
+        var(--azul-claro);
+
+    font-size: 23px;
+}
+
+
+.app-status {
+    padding:
+        6px 9px;
+
+    border-radius: 6px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    color:
+        var(--cinza);
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.app-status-azul {
+    color:
+        var(--azul-claro);
+
+    border-color:
+        var(--borda-azul);
+}
+
+
+/* ==========================================
+   TEXTO
+========================================== */
+
+.app-card h3 {
+    margin-top: 24px;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 25px;
+}
+
+
+.app-card p {
+    margin-top: 11px;
+
+    color:
+        var(--cinza);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   PLATAFORMAS
+========================================== */
+
+.app-plataformas {
+    margin-top: 17px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+
+.app-plataformas span {
+    padding:
+        5px 8px;
+
+    border-radius: 5px;
+
+    background:
+        rgba(32, 184, 255, 0.05);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.11);
+
+    color:
+        var(--azul-claro);
+
+    font-size: 9px;
+}
+
+
+/* ==========================================
+   LINK
+========================================== */
+
+.app-card > a {
+    margin-top: auto;
+
+    padding-top: 21px;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color:
+        var(--azul-claro);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   LICENÇA
+========================================== */
+
+.licencas-section {
+    padding:
+        0 0 90px;
+}
+
+
+.licenca-box {
+    padding: 45px;
+
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr;
+
+    gap: 28px;
+
+    align-items: flex-start;
+
+    border-radius: 22px;
+
+    background:
+        radial-gradient(
+            circle at right,
+            rgba(13, 110, 255, 0.12),
+            transparent 38%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(14, 22, 40, 0.88),
+            rgba(5, 8, 15, 0.94)
+        );
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.16);
+}
+
+
+.licenca-icone {
+    width: 66px;
+    height: 66px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background:
+        rgba(13, 110, 255, 0.11);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.19);
+
+    color:
+        var(--azul-claro);
+
+    font-size: 25px;
+}
+
+
+.licenca-tag {
+    color:
+        var(--azul-claro);
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.licenca-conteudo h2 {
+    margin-top: 8px;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size:
+        clamp(33px, 4vw, 48px);
+
+    line-height: 1;
+}
+
+
+.licenca-conteudo > p {
+    max-width: 760px;
+
+    margin-top: 16px;
+
+    color:
+        var(--cinza);
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+
+.licenca-aviso {
+    margin-top: 21px;
+
+    padding:
+        14px 16px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 11px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(32, 184, 255, 0.04);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.11);
+
+    color:
+        var(--cinza);
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+.licenca-aviso i {
+    margin-top: 2px;
+
+    color:
+        var(--azul-claro);
+}
+
+
+/* ==========================================
+   PARCERIA X LICENÇA
+========================================== */
+
+.parceria-section {
+    padding:
+        0 0 90px;
+}
+
+
+.parceria-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    max-width: 900px;
+
+    margin:
+        0 auto;
+}
+
+
+.parceria-card {
+    position: relative;
+
+    padding: 32px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 24, 42, 0.72),
+            rgba(5, 8, 15, 0.88)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+}
+
+
+.parceria-card-principal {
+    border-color:
+        rgba(32, 184, 255, 0.26);
+
+    box-shadow:
+        0 18px 55px
+        rgba(13, 110, 255, 0.08);
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(13, 110, 255, 0.13),
+            transparent 42%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(16, 24, 42, 0.78),
+            rgba(5, 8, 15, 0.92)
+        );
+}
+
+
+.parceria-recomendado {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    padding:
+        5px 8px;
+
+    border-radius: 5px;
+
+    background:
+        rgba(32, 184, 255, 0.09);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.18);
+
+    color:
+        var(--azul-claro);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.parceria-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 23px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(13, 110, 255, 0.09);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.16);
+
+    color:
+        var(--azul-claro);
+
+    font-size: 22px;
+}
+
+
+.parceria-label {
+    color:
+        var(--azul-claro);
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.parceria-card h3 {
+    margin-top: 8px;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 28px;
+}
+
+
+.parceria-card > p {
+    margin-top: 13px;
+
+    color:
+        var(--cinza);
+
+    font-size: 12px;
+
+    line-height: 1.75;
+}
+
+
+.parceria-card ul {
+    margin-top: 24px;
+
+    display: grid;
+
+    gap: 12px;
+
+    list-style: none;
+}
+
+
+.parceria-card li {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color:
+        var(--cinza);
+
+    font-size: 11px;
+}
+
+
+.parceria-card li i {
+    color:
+        var(--azul-claro);
+
+    font-size: 10px;
+}
+
+
+/* ==========================================
+   AVISO FINAL
+========================================== */
+
+.apps-aviso-section {
+    padding:
+        0 0 90px;
+}
+
+
+.apps-aviso {
+    max-width: 850px;
+
+    margin:
+        0 auto;
+
+    padding:
+        20px 22px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(32, 184, 255, 0.035);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.11);
+}
+
+
+.apps-aviso i {
+    color:
+        var(--azul-claro);
+
+    font-size: 17px;
+}
+
+
+.apps-aviso p {
+    color:
+        var(--cinza);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1050px) {
+
+    .apps-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 850px) {
+
+    .apps-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .licenca-box {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .parceria-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 480px) {
+
+    .apps-section {
+        padding:
+            55px 0;
+    }
+
+
+    .apps-grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 12px;
+    }
+
+
+    .app-card {
+        min-height: auto;
+
+        padding: 22px;
+    }
+
+
+    .app-icon {
+        width: 54px;
+        height: 54px;
+
+        font-size: 21px;
+    }
+
+
+    .app-card h3 {
+        font-size: 24px;
+    }
+
+
+    .licencas-section {
+        padding:
+            0 0 55px;
+    }
+
+
+    .licenca-box {
+        padding:
+            28px 22px;
+
+        gap: 20px;
+
+        border-radius: 17px;
+    }
+
+
+    .licenca-icone {
+        width: 56px;
+        height: 56px;
+
+        font-size: 21px;
+    }
+
+
+    .licenca-conteudo h2 {
+        font-size: 34px;
+    }
+
+
+    .parceria-section {
+        padding:
+            0 0 55px;
+    }
+
+
+    .parceria-grid {
+        gap: 12px;
+    }
+
+
+    .parceria-card {
+        padding:
+            25px 22px;
+
+        border-radius: 17px;
+    }
+
+
+    .parceria-card h3 {
+        font-size: 26px;
+    }
+
+
+    .apps-aviso-section {
+        padding:
+            0 0 55px;
+    }
+
+}
+
+/* ==========================================
+   PÁGINA SUPORTE
+========================================== */
+
+.suporte-section {
+    padding:
+        90px 0;
+}
+
+
+/* ==========================================
+   GRID SUPORTE
+========================================== */
+
+.suporte-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+/* ==========================================
+   CARD SUPORTE
+========================================== */
+
+.suporte-card {
+    min-height: 280px;
+
+    padding: 27px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 24, 42, 0.74),
+            rgba(5, 8, 15, 0.88)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.suporte-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--borda-azul);
+
+    box-shadow:
+        0 18px 50px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+.suporte-card-destaque {
+    border-color:
+        rgba(32, 184, 255, 0.20);
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(13, 110, 255, 0.12),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(16, 24, 42, 0.78),
+            rgba(5, 8, 15, 0.92)
+        );
+}
+
+
+/* ==========================================
+   ÍCONE
+========================================== */
+
+.suporte-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(13, 110, 255, 0.09);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.17);
+
+    color:
+        var(--azul-claro);
+
+    font-size: 23px;
+}
+
+
+/* ==========================================
+   TEXTO
+========================================== */
+
+.suporte-card h3 {
+    margin-top: 25px;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 27px;
+}
+
+
+.suporte-card p {
+    margin-top: 12px;
+
+    color:
+        var(--cinza);
+
+    font-size: 12px;
+
+    line-height: 1.75;
+}
+
+
+.suporte-card > a {
+    margin-top: auto;
+
+    padding-top: 24px;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color:
+        var(--azul-claro);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   COMO PEDIR SUPORTE
+========================================== */
+
+.suporte-ajuda-section {
+    padding:
+        0 0 90px;
+}
+
+
+.suporte-ajuda-box {
+    padding: 48px;
+
+    display: grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    gap: 60px;
+
+    border-radius: 22px;
+
+    background:
+        radial-gradient(
+            circle at right,
+            rgba(13, 110, 255, 0.11),
+            transparent 40%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(14, 22, 40, 0.88),
+            rgba(5, 8, 15, 0.94)
+        );
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.14);
+}
+
+
+.suporte-ajuda-tag {
+    color:
+        var(--azul-claro);
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.suporte-ajuda-conteudo h2 {
+    margin-top: 9px;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size:
+        clamp(34px, 4vw, 49px);
+
+    line-height: 1;
+}
+
+
+.suporte-ajuda-conteudo p {
+    margin-top: 17px;
+
+    color:
+        var(--cinza);
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+
+/* ==========================================
+   LISTA
+========================================== */
+
+.suporte-info-lista {
+    display: grid;
+
+    gap: 12px;
+}
+
+
+.suporte-info-item {
+    padding: 16px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+}
+
+
+.suporte-info-item > span {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background:
+        rgba(13, 110, 255, 0.09);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.16);
+
+    color:
+        var(--azul-claro);
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.suporte-info-item strong {
+    display: block;
+
+    font-size: 12px;
+}
+
+
+.suporte-info-item p {
+    margin-top: 5px;
+
+    color:
+        var(--cinza);
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   LICENÇA / ATIVAÇÃO
+========================================== */
+
+.suporte-licenca-section {
+    padding:
+        0 0 90px;
+}
+
+
+.suporte-licenca-box {
+    max-width: 900px;
+
+    margin:
+        0 auto;
+
+    padding:
+        30px 34px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(32, 184, 255, 0.035);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.13);
+}
+
+
+.suporte-licenca-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background:
+        rgba(13, 110, 255, 0.09);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.17);
+
+    color:
+        var(--azul-claro);
+
+    font-size: 22px;
+}
+
+
+.suporte-licenca-box span {
+    color:
+        var(--azul-claro);
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.suporte-licenca-box h2 {
+    margin-top: 5px;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 29px;
+}
+
+
+.suporte-licenca-box p {
+    max-width: 720px;
+
+    margin-top: 8px;
+
+    color:
+        var(--cinza);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1050px) {
+
+    .suporte-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 850px) {
+
+    .suporte-ajuda-box {
+        padding: 36px;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 480px) {
+
+    .suporte-section {
+        padding:
+            55px 0;
+    }
+
+
+    .suporte-grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 12px;
+    }
+
+
+    .suporte-card {
+        min-height: auto;
+
+        padding: 22px;
+    }
+
+
+    .suporte-icon {
+        width: 54px;
+        height: 54px;
+
+        font-size: 21px;
+    }
+
+
+    .suporte-card h3 {
+        font-size: 25px;
+    }
+
+
+    .suporte-ajuda-section {
+        padding:
+            0 0 55px;
+    }
+
+
+    .suporte-ajuda-box {
+        padding:
+            28px 22px;
+
+        gap: 28px;
+
+        border-radius: 17px;
+    }
+
+
+    .suporte-ajuda-conteudo h2 {
+        font-size: 34px;
+    }
+
+
+    .suporte-ajuda-conteudo p {
+        font-size: 12px;
+    }
+
+
+    .suporte-licenca-section {
+        padding:
+            0 0 55px;
+    }
+
+
+    .suporte-licenca-box {
+        padding:
+            25px 22px;
+
+        align-items: flex-start;
+
+        border-radius: 16px;
+    }
+
+
+    .suporte-licenca-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 19px;
+    }
+
+
+    .suporte-licenca-box h2 {
+        font-size: 26px;
+    }
+
+}
+
+/* ==========================================
+   PÁGINA FAQ
+========================================== */
+
+.faq-section {
+    padding:
+        90px 0;
+}
+
+
+/* ==========================================
+   LISTA FAQ
+========================================== */
+
+.faq-lista {
+    max-width: 900px;
+
+    margin:
+        0 auto;
+
+    display: grid;
+
+    gap: 12px;
+}
+
+
+/* ==========================================
+   ITEM
+========================================== */
+
+.faq-item {
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 24, 42, 0.72),
+            rgba(5, 8, 15, 0.90)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.faq-item.aberto {
+    border-color:
+        rgba(32, 184, 255, 0.22);
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(13, 110, 255, 0.09),
+            transparent 42%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(16, 24, 42, 0.78),
+            rgba(5, 8, 15, 0.92)
+        );
+}
+
+
+/* ==========================================
+   PERGUNTA
+========================================== */
+
+.faq-pergunta {
+    width: 100%;
+
+    min-height: 78px;
+
+    padding:
+        20px 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border: 0;
+
+    background:
+        transparent;
+
+    color:
+        var(--branco);
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.faq-pergunta span {
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.faq-pergunta i {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background:
+        rgba(13, 110, 255, 0.08);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.14);
+
+    color:
+        var(--azul-claro);
+
+    font-size: 13px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.faq-item.aberto
+.faq-pergunta i {
+    transform:
+        rotate(45deg);
+
+    background:
+        rgba(13, 110, 255, 0.15);
+}
+
+
+/* ==========================================
+   RESPOSTA
+========================================== */
+
+.faq-resposta {
+    display: grid;
+
+    grid-template-rows:
+        0fr;
+
+    transition:
+        grid-template-rows 0.3s ease;
+}
+
+
+.faq-item.aberto
+.faq-resposta {
+    grid-template-rows:
+        1fr;
+}
+
+
+.faq-resposta-conteudo {
+    overflow: hidden;
+}
+
+
+.faq-resposta p {
+    padding:
+        0 70px 24px 22px;
+
+    color:
+        var(--cinza);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   AJUDA FINAL
+========================================== */
+
+.faq-ajuda-section {
+    padding:
+        0 0 90px;
+}
+
+
+.faq-ajuda-box {
+    max-width: 950px;
+
+    margin:
+        0 auto;
+
+    padding:
+        35px;
+
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr auto;
+
+    align-items: center;
+
+    gap: 24px;
+
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle at right,
+            rgba(13, 110, 255, 0.11),
+            transparent 40%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(14, 22, 40, 0.88),
+            rgba(5, 8, 15, 0.94)
+        );
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.14);
+}
+
+
+.faq-ajuda-icon {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        rgba(13, 110, 255, 0.09);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.17);
+
+    color:
+        var(--azul-claro);
+
+    font-size: 23px;
+}
+
+
+.faq-ajuda-texto > span {
+    color:
+        var(--azul-claro);
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.faq-ajuda-texto h2 {
+    margin-top: 4px;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 31px;
+}
+
+
+.faq-ajuda-texto p {
+    margin-top: 7px;
+
+    color:
+        var(--cinza);
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 850px) {
+
+    .faq-ajuda-box {
+        grid-template-columns:
+            auto 1fr;
+    }
+
+
+    .faq-ajuda-box > .btn {
+        grid-column:
+            1 / -1;
+
+        width: 100%;
+    }
+
+}
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 480px) {
+
+    .faq-section {
+        padding:
+            55px 0;
+    }
+
+
+    .faq-lista {
+        gap: 9px;
+    }
+
+
+    .faq-pergunta {
+        min-height: 70px;
+
+        padding:
+            18px;
+    }
+
+
+    .faq-pergunta span {
+        font-size: 18px;
+
+        line-height: 1.15;
+    }
+
+
+    .faq-pergunta i {
+        width: 31px;
+        height: 31px;
+    }
+
+
+    .faq-resposta p {
+        padding:
+            0 18px 20px;
+
+        font-size: 11px;
+    }
+
+
+    .faq-ajuda-section {
+        padding:
+            0 0 55px;
+    }
+
+
+    .faq-ajuda-box {
+        padding:
+            25px 22px;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 17px;
+
+        border-radius: 17px;
+    }
+
+
+    .faq-ajuda-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 20px;
+    }
+
+
+    .faq-ajuda-texto h2 {
+        font-size: 28px;
+    }
+
+}
+
+/* ==========================================
+   PÁGINA CONTATO
+========================================== */
+
+.contato-section {
+    padding:
+        80px 0 90px;
+}
+
+
+/* ==========================================
+   ESCOLHA DO TIPO
+========================================== */
+
+.contato-escolha {
+    max-width: 900px;
+
+    margin:
+        0 auto 65px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+
+.tipo-atendimento-btn {
+    position: relative;
+
+    min-height: 155px;
+
+    padding: 24px;
+
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr auto;
+
+    align-items: center;
+
+    gap: 17px;
+
+    border-radius: 18px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 24, 42, 0.72),
+            rgba(5, 8, 15, 0.90)
+        );
+
+    color:
+        var(--branco);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.tipo-atendimento-btn:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(32, 184, 255, 0.22);
+}
+
+
+.tipo-atendimento-btn.ativo {
+    border-color:
+        rgba(32, 184, 255, 0.40);
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(13, 110, 255, 0.16),
+            transparent 48%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(16, 24, 42, 0.82),
+            rgba(5, 8, 15, 0.94)
+        );
+
+    box-shadow:
+        0 15px 45px
+        rgba(13, 110, 255, 0.08);
+}
+
+
+.tipo-atendimento-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 15px;
+
+    background:
+        rgba(13, 110, 255, 0.09);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.17);
+
+    color:
+        var(--azul-claro);
+
+    font-size: 22px;
+}
+
+
+.tipo-atendimento-btn span {
+    display: block;
+
+    color:
+        var(--azul-claro);
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+}
+
+
+.tipo-atendimento-btn strong {
+    display: block;
+
+    margin-top: 5px;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 25px;
+}
+
+
+.tipo-atendimento-btn p {
+    margin-top: 5px;
+
+    color:
+        var(--cinza);
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+.tipo-seta {
+    color:
+        var(--azul-claro);
+
+    font-size: 13px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.tipo-atendimento-btn.ativo
+.tipo-seta {
+    transform:
+        translateX(4px);
+}
+
+
+/* ==========================================
+   FLUXOS
+========================================== */
+
+.contato-fluxo {
+    display: none;
+}
+
+
+.contato-fluxo.ativo {
+    display: block;
+}
+
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.contato-layout {
+    display: grid;
+
+    grid-template-columns:
+        0.85fr 1.15fr;
+
+    gap: 55px;
+
+    align-items: start;
+}
+
+
+/* ==========================================
+   INFORMAÇÕES
+========================================== */
+
+.contato-tag {
+    color:
+        var(--azul-claro);
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.contato-info > h2 {
+    max-width: 480px;
+
+    margin-top: 8px;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size:
+        clamp(
+            38px,
+            4vw,
+            53px
+        );
+
+    line-height: 1;
+}
+
+
+.contato-descricao {
+    max-width: 480px;
+
+    margin-top: 17px;
+
+    color:
+        var(--cinza);
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+
+/* ==========================================
+   DESTAQUE
+========================================== */
+
+.contato-destaque {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    border-radius: 16px;
+
+    background:
+        radial-gradient(
+            circle at left,
+            rgba(13, 110, 255, 0.10),
+            transparent 55%
+        ),
+        rgba(255, 255, 255, 0.025);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.13);
+}
+
+
+.contato-destaque-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background:
+        rgba(13, 110, 255, 0.11);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.18);
+
+    color:
+        var(--azul-claro);
+
+    font-size: 25px;
+}
+
+
+.contato-destaque span {
+    display: block;
+
+    color:
+        var(--azul-claro);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.contato-destaque strong {
+    display: block;
+
+    margin-top: 4px;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 21px;
+}
+
+
+.contato-destaque p {
+    margin-top: 3px;
+
+    color:
+        var(--cinza);
+
+    font-size: 10px;
+}
+
+
+/* ==========================================
+   MINI CARDS
+========================================== */
+
+.contato-mini-grid {
+    margin-top: 14px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+
+.contato-mini-card {
+    min-height: 75px;
+
+    padding: 13px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.02);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+}
+
+
+.contato-mini-card > i {
+    color:
+        var(--azul-claro);
+
+    font-size: 16px;
+}
+
+
+.contato-mini-card strong {
+    display: block;
+
+    font-size: 10px;
+}
+
+
+.contato-mini-card span {
+    display: block;
+
+    margin-top: 3px;
+
+    color:
+        var(--cinza);
+
+    font-size: 8px;
+}
+
+
+/* ==========================================
+   FORM BOX
+========================================== */
+
+.contato-form-box {
+    padding: 35px;
+
+    border-radius: 22px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(13, 110, 255, 0.11),
+            transparent 40%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(16, 24, 42, 0.82),
+            rgba(5, 8, 15, 0.94)
+        );
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.14);
+}
+
+
+.contato-form-top > span {
+    color:
+        var(--azul-claro);
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.contato-form-top h2 {
+    margin-top: 5px;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 34px;
+}
+
+
+.contato-form-top p {
+    margin-top: 8px;
+
+    color:
+        var(--cinza);
+
+    font-size: 11px;
+
+    line-height: 1.65;
+}
+
+
+/* ==========================================
+   FORMULÁRIO
+========================================== */
+
+.contato-form {
+    margin-top: 28px;
+
+    display: grid;
+
+    gap: 18px;
+}
+
+
+.form-grupo {
+    display: grid;
+
+    gap: 8px;
+}
+
+
+.form-grupo label {
+    color:
+        #dce3ec;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+.form-campo {
+    min-height: 52px;
+
+    padding:
+        0 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(1, 4, 10, 0.62);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.form-campo:focus-within {
+    border-color:
+        rgba(32, 184, 255, 0.35);
+
+    background:
+        rgba(5, 11, 22, 0.80);
+}
+
+
+.form-campo > i {
+    width: 18px;
+
+    color:
+        var(--azul-claro);
+
+    font-size: 13px;
+
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+
+.form-campo input,
+.form-campo select,
+.form-campo textarea {
+    width: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background:
+        transparent;
+
+    color:
+        var(--branco);
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    font-size: 11px;
+}
+
+
+.form-campo select {
+    min-height: 50px;
+
+    cursor: pointer;
+
+    color-scheme: dark;
+}
+
+
+.form-campo select option {
+    background:
+        #080d17;
+
+    color:
+        white;
+}
+
+
+.form-campo input::placeholder,
+.form-campo textarea::placeholder {
+    color:
+        #687383;
+}
+
+
+.form-textarea {
+    padding: 15px;
+
+    align-items: flex-start;
+}
+
+
+.form-textarea > i {
+    margin-top: 3px;
+}
+
+
+.form-campo textarea {
+    min-height: 100px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   BOTÃO FORM
+========================================== */
+
+.contato-enviar {
+    width: 100%;
+
+    border: 0;
+
+    cursor: pointer;
+}
+
+
+.contato-observacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    color:
+        #697483;
+
+    font-size: 8px;
+}
+
+
+.contato-observacao i {
+    color:
+        var(--azul-claro);
+}
+
+
+/* ==========================================
+   LINKS RÁPIDOS
+========================================== */
+
+.contato-links-section {
+    padding:
+        0 0 90px;
+}
+
+
+.contato-links-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 13px;
+}
+
+
+.contato-link-card {
+    min-height: 85px;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255, 255, 255, 0.02);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.contato-link-card:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        var(--borda-azul);
+}
+
+
+.contato-link-card > div {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background:
+        rgba(13, 110, 255, 0.09);
+
+    color:
+        var(--azul-claro);
+}
+
+
+.contato-link-card span {
+    flex: 1;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+.contato-link-card > i {
+    color:
+        var(--azul-claro);
+
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .contato-layout {
+        grid-template-columns:
+            1fr;
+
+        gap: 40px;
+    }
+
+
+    .contato-links-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 480px) {
+
+    .contato-section {
+        padding:
+            55px 0;
+    }
+
+
+    .contato-escolha {
+        margin-bottom: 42px;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 10px;
+    }
+
+
+    .tipo-atendimento-btn {
+        min-height: 125px;
+
+        padding: 19px;
+
+        grid-template-columns:
+            auto 1fr auto;
+
+        gap: 13px;
+    }
+
+
+    .tipo-atendimento-icon {
+        width: 52px;
+        height: 52px;
+
+        font-size: 19px;
+    }
+
+
+    .tipo-atendimento-btn strong {
+        font-size: 22px;
+    }
+
+
+    .tipo-atendimento-btn p {
+        font-size: 9px;
+    }
+
+
+    .contato-layout {
+        gap: 30px;
+    }
+
+
+    .contato-info > h2 {
+        font-size: 36px;
+    }
+
+
+    .contato-mini-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .contato-form-box {
+        padding:
+            27px 20px;
+
+        border-radius: 17px;
+    }
+
+
+    .contato-form-top h2 {
+        font-size: 30px;
+    }
+
+
+    .contato-links-section {
+        padding:
+            0 0 55px;
+    }
+
+
+    .contato-links-grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 9px;
+    }
+
+
+    .contato-link-card {
+        min-height: 75px;
+    }
+
+}
+
+/* ==========================================
+   CONTATO - SELEÇÃO CONTRATAR / SUPORTE
+========================================== */
+
+.contato-escolha {
+    max-width: 900px;
+
+    margin:
+        0 auto 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+
+.tipo-atendimento-btn {
+    min-height: 150px;
+
+    padding: 23px;
+
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr auto;
+
+    align-items: center;
+
+    gap: 17px;
+
+    border-radius: 18px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 24, 42, 0.72),
+            rgba(5, 8, 15, 0.90)
+        );
+
+    color:
+        var(--branco);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.tipo-atendimento-btn:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        var(--borda-azul);
+}
+
+
+.tipo-atendimento-btn.ativo {
+    border-color:
+        rgba(32, 184, 255, 0.40);
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(13, 110, 255, 0.15),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(16, 24, 42, 0.82),
+            rgba(5, 8, 15, 0.94)
+        );
+
+    box-shadow:
+        0 15px 45px
+        rgba(13, 110, 255, 0.08);
+}
+
+
+.tipo-atendimento-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 15px;
+
+    background:
+        rgba(13, 110, 255, 0.09);
+
+    border:
+        1px solid
+        rgba(32, 184, 255, 0.17);
+
+    color:
+        var(--azul-claro);
+
+    font-size: 22px;
+}
+
+
+.tipo-atendimento-btn span {
+    display: block;
+
+    color:
+        var(--azul-claro);
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+}
+
+
+.tipo-atendimento-btn strong {
+    display: block;
+
+    margin-top: 5px;
+
+    font-family:
+        "Rajdhani",
+        sans-serif;
+
+    font-size: 25px;
+}
+
+
+.tipo-atendimento-btn p {
+    margin-top: 5px;
+
+    color:
+        var(--cinza);
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+.tipo-seta {
+    color:
+        var(--azul-claro);
+
+    font-size: 12px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.tipo-atendimento-btn.ativo
+.tipo-seta {
+    transform:
+        translateX(4px);
+}
+
+
+/* FORMULÁRIO QUE APARECE */
+
+.contato-fluxo {
+    display: none;
+}
+
+
+.contato-fluxo.ativo {
+    display: block;
+
+    animation:
+        contatoEntrada 0.3s ease;
+}
+
+
+@keyframes contatoEntrada {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 480px) {
+
+    .contato-escolha {
+        margin-bottom: 40px;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 10px;
+    }
+
+
+    .tipo-atendimento-btn {
+        min-height: 125px;
+
+        padding: 18px;
+
+        gap: 13px;
+    }
+
+
+    .tipo-atendimento-icon {
+        width: 51px;
+        height: 51px;
+
+        font-size: 19px;
+    }
+
+
+    .tipo-atendimento-btn strong {
+        font-size: 22px;
+    }
+
+
+    .tipo-atendimento-btn p {
+        font-size: 9px;
     }
 
 }
