@@ -362,3 +362,85 @@ if (formSuporte) {
     );
 
 }
+
+
+
+/* ==========================================
+   APLICATIVOS -> CONTATO
+========================================== */
+
+const parametrosUrl =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+const interesseUrl =
+    parametrosUrl.get("interesse");
+
+
+const selectInteresse =
+    document.getElementById(
+        "comprar-interesse"
+    );
+
+
+if (interesseUrl && selectInteresse) {
+
+    const interesses = {
+
+        "max-player":
+            "Quero contratar o Max Player",
+
+        "teste-max-player":
+            "Quero testar o Max Player",
+
+        "fun-player":
+            "Quero contratar o Fun Player"
+
+    };
+
+
+    const interesseSelecionado =
+        interesses[interesseUrl];
+
+
+    if (interesseSelecionado) {
+
+        const opcaoExistente =
+            Array
+                .from(selectInteresse.options)
+                .find(
+                    (option) =>
+                        option.value ===
+                        interesseSelecionado
+                );
+
+
+        if (!opcaoExistente) {
+
+            const novaOpcao =
+                document.createElement("option");
+
+
+            novaOpcao.value =
+                interesseSelecionado;
+
+
+            novaOpcao.textContent =
+                interesseSelecionado;
+
+
+            selectInteresse.appendChild(
+                novaOpcao
+            );
+
+        }
+
+
+        selectInteresse.value =
+            interesseSelecionado;
+
+    }
+
+}
